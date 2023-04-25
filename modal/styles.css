@@ -1,0 +1,100 @@
+
+@font-face {
+    font-family: GoldLeaf;
+    src: url('image and text files/GoldLeaf.ttf');
+}
+
+* {
+    font-family: GoldLeaf;
+    letter-spacing: 0.5px;
+    word-spacing: 3px;    
+}
+
+h1{
+    text-align: center;
+}
+
+img {
+    position: absolute;
+    left:0px;
+    top:0px;
+    height:100%;
+    width:100%;
+    z-index:-1;
+    opacity:0.6;
+}
+
+#brightness-img{
+    animation-name: change-brightness;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes change-brightness{
+    from{
+        filter: brightness(100%);
+    }
+    to{
+        filter: brightness(90%);
+    }
+}
+
+.onClick-div{
+    position: absolute;
+    left:0px;
+    top: 100px;
+
+    display:flex;
+    flex-direction: column;
+    flex-shrink: 1;
+
+    background-color: white;
+    margin-left: 200px;
+    margin-right:200px;
+    padding:10px 10px;
+    border: 1px solid black;
+    border-radius:5px;
+
+    animation-name: show-modal;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}
+
+@keyframes show-modal {
+    0%{
+        position: absolute;
+        top:-100px;
+        background: transparent;
+    }
+    100%{
+        position: absolute;
+        left:0px;
+        top: 100px;
+        background-color: white;
+    }
+}
+
+button{
+    position: absolute;
+    left:0px;
+    bottom: 30px;
+    margin-left:10px;
+    background: transparent;
+    border-radius: 5px;
+}
+
+button:hover{
+    animation-name:change-color;
+    animation-duration:2s;
+}
+
+@keyframes change-color {
+    0%{
+        background: transparent;
+    }
+    100%{
+        background-color: antiquewhite;
+    }
+}
+
